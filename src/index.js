@@ -8,7 +8,7 @@ const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 function getNext7Dates() {
   const dates = [];
 
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 1; i++) {
     const d = new Date();
     d.setDate(d.getDate() + i);
 
