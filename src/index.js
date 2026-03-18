@@ -61,7 +61,7 @@ function extractFlights(data) {
           option.legSegmentList?.forEach(segment => {
             const seats = parseInt(segment.seats || "0", 10);
 
-            if (seats >= 4) {
+            if (seats >= 0) {
               matches.push({
                 flightNumber: segment.flightNumber,
                 dep: segment.depLoc,
