@@ -10,6 +10,7 @@ function getNext7Dates() {
 
   for (let i = 0; i < 1; i++) {
     const d = new Date();
+    d.setHours(d.getHours() + 3);
     d.setDate(d.getDate() + i);
 
     const formatted = d.toLocaleDateString("en-GB").replace(/\//g, "%2F");
