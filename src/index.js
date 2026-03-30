@@ -9,8 +9,8 @@ function getNext7Dates() {
   const dates = [];
 
   for (let i = 0; i < 7; i++) {
-    const d = new Date();
-    d.setHours(d.getHours() + 5);
+    const d = new Date("2026-04-04 00:00:00");
+    //d.setHours(d.getHours() + 5);
     d.setDate(d.getDate() + i);
 
     const formatted = d.toLocaleDateString("en-GB").replace(/\//g, "%2F");
@@ -62,7 +62,7 @@ function extractFlights(data) {
           option.legSegmentList?.forEach(segment => {
             const seats = parseInt(segment.seats || "0", 10);
 
-            if (seats >= 3) {
+            if (seats >= 4) {
               matches.push({
                 flightNumber: segment.flightNumber,
                 dep: segment.depLoc,
