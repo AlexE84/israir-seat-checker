@@ -47,7 +47,7 @@ function extractFlights(data) {
   const matches = [];
 
   const packages =
-    data?.data?.additionalPackagesResponse?.ltsPackages || [];
+    data?.data?.ltsPackages || [];
 
   packages.forEach(pkg => {
     const price =
