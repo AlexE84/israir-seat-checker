@@ -126,7 +126,6 @@ async function main() {
                  `https://www.israir.co.il/api/search/FLIGHTS?origin=%7B%22type%22%3A%22ltravelId%22%2C%22destinationType%22%3A%22CITY%22%2C%22cityCode%22%3A%22LCA%22%2C%22ltravelId%22%3A931%2C%22countryCode%22%3Anull%2C%22countryId%22%3Anull%7D&destination=%7B%22type%22%3A%22ltravelId%22%2C%22destinationType%22%3A%22CITY%22%2C%22cityCode%22%3A%22TLV%22%2C%22ltravelId%22%3A768%2C%22countryCode%22%3Anull%2C%22countryId%22%3Anull%7D&startDate=${date}&adults=2&children=2%2C2&searchTime=2026-03-30T21%3A47%3A00.984Z&sessionMetadata=%7B%22clientKey%22%3A%7B%22clientId%22%3A%22f383e516-b7f8-48ad-aae9-71291aef1289-1774902808760%22%7D%2C%22useMockData%22%3Afalse%2C%22debug%22%3Afalse%7D&siteId=isra2023`];
       for (const url of urls) {
         const data = await fetchIsrair(url);
-        console.log("url: ", data);
         const flights = extractFlights(data);
   
         allFlights = allFlights.concat(flights);
